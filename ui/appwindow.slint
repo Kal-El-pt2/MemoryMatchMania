@@ -1,0 +1,439 @@
+import { Button } from "std-widgets.slint";
+
+/*component AnTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component LuTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component HanTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component LeiaTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component YodaTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component PalTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component C3Tile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component R2D2Tile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+component ObiTile inherits Rectangle {
+    callback clicked;
+    in property <bool> open_curtain;
+    in property <bool> solved;
+    in property <image> icon;
+
+    height: 64px;
+    width: 64px;
+    background: solved ? #34CE57 : #3960D5;
+    animate background { duration: 800ms; }
+
+    Image {
+        source: icon;
+        width: parent.width;
+        height: parent.height;
+    }
+
+    // Left curtain
+    Rectangle {
+        background: #193076;
+        x: 0px;
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+    }
+
+    // Right curtain
+    Rectangle {
+        background: #193076;
+        x: open_curtain ? parent.width : (parent.width / 2);
+        width: open_curtain ? 0px : (parent.width / 2);
+        height: parent.height;
+        animate width { duration: 250ms; easing: ease-in; }
+        animate x { duration: 250ms; easing: ease-in; }
+    }
+
+    TouchArea {
+        clicked => {
+            // Delegate to the user of this element
+            root.clicked();
+        }
+    }
+}
+export component AppWindow inherits Window {
+    AnTile {
+        icon: @image-url("../star-wars/images/Anakin.jpeg");
+        clicked => {
+            self.open_curtain =!self.open_curtain;
+        }
+    }
+    
+
+
+    GridLayout {
+        spacing: 10px;
+
+        Row {
+            AnTile {}
+            LeiaTile {}
+            R2D2Tile {}
+            YodaTile {}
+        }
+
+        Row {
+            LuTile {}
+            YodaTile {}
+            ObiTile {}
+            HanTile {}
+        }
+
+        Row {
+            HanTile {}
+            C3Tile {}
+            PalTile {}
+            AnTile {}
+        }
+
+        Row {
+            ObiTile {}
+            YodaTile {}
+            LeiaTile {}
+            R2D2Tile {}
+        }
+
+        Row {
+            C3Tile {}
+            LuTile {}
+            PalTile {}
+            HanTile {}
+        }
+    }
+}
+*/
